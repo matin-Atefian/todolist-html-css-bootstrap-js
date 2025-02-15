@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="todolist.js" defer></script>
+  </head>
+
+  <body
+    class="bg-dark container-fluid d-flex align-items-center justify-content-center"
+  >
+    <section class="w-100 d-flex justify-content-center">
+      <div class="w-75 ms-2">
+        <div
+          class="border border-2 border-info text-white mt-4 p-4 rounded-4 w-100"
+        >
+          <h1 class="h3">My To Do List:</h1>
+          <div class="d-flex justify-content-between w-100">
+            <div class="w-50">
+              <h2>Task :</h2>
+              <input type="text" class="form-control width2 my-3 input1" />
+              <p class="text-secondary w-50">Please Write Your Task</p>
+              <div
+                class="pop-done d-flex justify-content-between p-4 align-items-center"
+              >
+                <div>
+                  <h3 class="m-auto">Task Completed</h3>
+                </div>
+                <div class="d-flex">
+                  <span class="me-auto ms-2 my-auto span-undo1">5</span>
+                </div>
+              </div>
+              <div
+                class="pop-delete justify-content-between p-4 d-flex align-items-center"
+              >
+                <div>
+                  <h3 class="m-auto">Task Deleted</h3>
+                </div>
+                <div class="d-flex">
+                  <span class="me-auto ms-2 my-auto span-undo2">5</span>
+                </div>
+              </div>
+            </div>
+            <div class="w-25 parent-input1">
+              <h2>Projects :</h2>
+              <input
+                type="text"
+                class="form-control width2 mt-3 mb-2 input2"
+                value="Project"
+              />
+              <div class="child-input1 position-relative">
+                <p class="my-2 p-input1 p-input-color3">Home</p>
+                <p class="my-2 p-input2 p-input-color3">Work</p>
+                <p class="my-2 p-input3 p-input-color3">Study</p>
+              </div>
+            </div>
+            <div class="w-25 parent-input2">
+              <h2>Priority :</h2>
+              <input
+                type="text"
+                class="form-control width2 mt-3 mb-2 input3"
+                value="No Priority"
+              />
+              <div class="child-input2 position-relative">
+                <p class="my-2 p-input4 p-input-color2">High Priority</p>
+                <p class="my-2 p-input5 p-input-color1">Medium Priority</p>
+                <p class="my-2 p-input6 p-input-color">Low Priority</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-info mt-3">Add To List</button>
+          <h2 class="h4 mt-4 mb-4">
+            My List :<span id="span" class="span">0</span>
+            <span
+            class="text-white home h6 ms-3 px-2 py-1 btn btn-outline-info span-project0"
+            >All Projects </span>
+          <span
+              class="text-white home h6 ms-3 px-2 py-1 btn btn-outline-info span-project4"
+              >project<span class="ms-1 span-num-p">0/</span><span  class="span-my-p">0</span></span>
+            <span
+              class="text-white home h6 ms-3 px-2 py-1 btn btn-outline-info span-project1"
+              >Home<span class="ms-1 span-num-h">0/</span><span  class="span-my-h">0</span></span>
+            <span
+              class="text-white work h6 ms-3 px-2 py-1 btn btn-outline-info span-project2"
+              >Work<span class="ms-1 span-num-w">0/</span><span  class="span-my-w">0</span></span>
+            <span
+              class="text-white study h6 ms-3 px-2 py-1 btn btn-outline-info span-project3"
+              >Study<span class="ms-1 span-num-s">0/</span><span  class="span-my-s">0</span></span>
+          </h2>
+          <ol class="ol1"></ol>
+          <div class="ol-Project">
+            <h2 class="hid h2-Project"># Project</h2>
+            <ol class="olProject"></ol>
+          </div>
+          <div class="ol-home">
+            <h2 class="hid h2-Home"># Home</h2>
+            <ol class="olHome"></ol>
+          </div>
+          <div class="ol-Work">
+          <h2 class="hid h2-Work"># Work</h2>
+          <ol class="olWork"></ol>
+          </div>
+          <div class="ol-Study"><h2 class="hid h2-Study">#Study</h2>
+          <ol class="olStudy">
+            
+          </div>
+          </ol>
+        </div>
+
+        <div class="done-delete-list">
+          <div
+            class="border border-2 border-success text-white mt-4 p-4 rounded-4 width mx-1"
+          >
+            <h2 class="h3">Completed Task:</h2>
+            <h2 class="h4 mt-2 mb-4">
+              My List :<span class="span listcount2">0</span>
+            </h2>
+            <ol class="ol2"></ol>
+            <button class="btn btn-outline-success button-delete1">
+              Delete All
+            </button>
+          </div>
+          <div
+            class="border border-2 border-danger text-white mt-4 p-4 rounded-4 width mx-1"
+          >
+            <h2 class="h3">Not Completed Task:</h2>
+            <h2 class="h4 mt-2 mb-4">
+              My List :<span class="span listcount3">0</span>
+            </h2>
+
+            <ol class="ol3"></ol>
+            <button class="btn btn-outline-danger button-delete2">
+              Delete All
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <img class="URL1" src="svg/check2.svg" alt="" />
+    <img class="URL2" src="svg/x-lg.svg" alt="" /> -->
+  </body>
+</html>
