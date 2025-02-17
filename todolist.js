@@ -11,11 +11,14 @@ let olHome = document.querySelector(".olHome");
 let olProject = document.querySelector(".olProject");
 let olWork = document.querySelector(".olWork");
 let olStudy = document.querySelector(".olStudy");
+// title ol
 let h2Home = document.querySelector(".h2-Home");
 let h2Project = document.querySelector(".h2-Project");
 let h2Work = document.querySelector(".h2-Work");
 let h2Study = document.querySelector(".h2-Study");
+
 let p = document.querySelector("p");
+// number of task
 let listcount = document.querySelector(".span");
 let listcount_p = document.querySelector(".span-my-p");
 let listcount_h = document.querySelector(".span-my-h");
@@ -34,22 +37,30 @@ let emp1 = 0;
 let emp2 = 0;
 let emp3 = 0;
 let emp4 = 0;
+// button Delete
 let buttonDelete1 = document.querySelector(".button-delete1");
 let buttonDelete2 = document.querySelector(".button-delete2");
+// input value Projects
 let inputChild = document.querySelector(".child-input1");
+// input value Priority
 let inputChild2 = document.querySelector(".child-input2");
 let parentInput = document.querySelector(".parent-input1");
 let parentInput2 = document.querySelector(".parent-input2");
+// p Home
 let pInput1 = document.querySelector(".p-input1");
+// p work
 let pInput2 = document.querySelector(".p-input2");
+// p study
 let pInput3 = document.querySelector(".p-input3");
+// p High Priority
 let pInput4 = document.querySelector(".p-input4");
+// p Medium Priority
 let pInput5 = document.querySelector(".p-input5");
+// p low Priority
 let pInput6 = document.querySelector(".p-input6");
+// pop up
 let popDone = document.querySelector(".pop-done");
 let popDelete = document.querySelector(".pop-delete");
-let undo1 = document.querySelector(".undo1");
-let undo2 = document.querySelector(".undo2");
 let spanUndo1 = document.querySelector(".span-undo1");
 let spanUndo2 = document.querySelector(".span-undo2");
 let span5 = document.createElement("span");
@@ -249,10 +260,7 @@ function toDoList() {
     }
     spanButton();
 
-    // input 2 value
-
     function input() {
-      // input 3 value
       if (
         input3.value.trim() == "No Priority" ||
         input3.value.trim() == "no priority"
@@ -362,7 +370,6 @@ function toDoList() {
           emp1--;
           listcountNum_P.textContent = emp1 + "/";
         });
-        // console.log(olHome.length);
       }
       if (input2.value.trim() == "Home" || input2.value.trim() == "home") {
         let Home = document.createElement("span");
@@ -542,20 +549,14 @@ function toDoList() {
     p.classList.replace("text-secondary", "text-danger");
     input1.classList.add("error");
   }
-  // input 2
 }
-// input2 and input3
 parentInput.addEventListener("mouseenter", () => {
-  // console.log("ok");
-  // console.log(inputChild);
   inputChild.classList.add("vis");
   pInput3.classList.add("p-input-next3");
   pInput2.classList.add("p-input-next3");
   pInput1.classList.add("p-input-next3");
 });
 parentInput.addEventListener("mouseleave", () => {
-  // console.log("ok");
-  // console.log(inputChild);
   inputChild.classList.remove("vis");
   pInput3.classList.remove("p-input-next3");
   pInput2.classList.remove("p-input-next3");
@@ -563,89 +564,32 @@ parentInput.addEventListener("mouseleave", () => {
 });
 
 parentInput2.addEventListener("mouseenter", () => {
-  // console.log("ok");
-  // console.log(inputChild);
   inputChild2.classList.add("vis");
   pInput6.classList.add("p-input-next");
   pInput5.classList.add("p-input-next1");
   pInput4.classList.add("p-input-next2");
 });
 parentInput2.addEventListener("mouseleave", () => {
-  // console.log("ok");
-  // console.log(inputChild);
   inputChild2.classList.remove("vis");
   pInput6.classList.remove("p-input-next");
   pInput5.classList.remove("p-input-next1");
   pInput4.classList.remove("p-input-next2");
 });
 pInput1.addEventListener("click", function () {
-  // console.log("ok");
   input2.value = pInput1.innerHTML;
 });
 pInput2.addEventListener("click", function () {
-  // console.log("ok");
   input2.value = pInput2.innerHTML;
 });
 pInput3.addEventListener("click", function () {
-  // console.log("ok");
   input2.value = pInput3.innerHTML;
 });
 pInput4.addEventListener("click", function () {
-  // console.log("ok");
   input3.value = pInput4.innerHTML;
 });
 pInput5.addEventListener("click", function () {
-  // console.log("ok");
   input3.value = pInput5.innerHTML;
 });
 pInput6.addEventListener("click", function () {
-  // console.log("ok");
   input3.value = pInput6.innerHTML;
 });
-// undo1.addEventListener("click", function () {
-//   undo1.classList.add("pot");
-
-//   div1.appendChild(div2);
-//   ol1.appendChild(li);
-//   li.classList.remove("pot");
-//   li.classList.remove("opas2");
-//   count2--;
-//   listcount2.textContent = count2;
-//   count1++;
-//   listcount.textContent = count1;
-//   if (count2 <= 0) {
-//     count2 = 0;
-//     listcount2.textContent = count2;
-//   }
-//   span2.style.border = "2px solid #212529";
-//   span2.style.color = "white";
-//   span2.style.boxShadow = "0px 0px 1px 5px #212529";
-//   // popDone.classList.add("hid");
-//   setTimeout(() => {
-//     undo1.classList.remove("pot");
-//   }, 5000);
-// });
-
-// undo2.addEventListener("click", function () {
-//   undo2.classList.add("pot");
-//   div1.appendChild(div2);
-//   ol1.appendChild(li);
-//   li.classList.remove("pot");
-//   li.classList.remove("opas1");
-//   count3--;
-//   listcount3.textContent = count2;
-//   count1++;
-//   listcount.textContent = count1;
-//   if (count3 <= 0) {
-//     count3 = 0;
-//     listcount2.textContent = count2;
-//   }
-//   undo2.classList.add("pot");
-//   span3.style.border = "2px solid #212529";
-//   span3.style.color = "white";
-//   span3.style.boxShadow = "0px 0px 1px 5px #212529";
-
-//   setTimeout(() => {
-//     undo2.classList.remove("pot");
-//   }, 5000);
-// });
